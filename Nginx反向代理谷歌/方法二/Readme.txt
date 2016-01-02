@@ -11,13 +11,11 @@ openssl x509 -req -days 3650 -in server.csr -signkey server.key -out server.crt
 
 
 ########################
-以后再也不百度技术问题了，都是抄来抄去，而且细节问题还抄错.
-subs_filter  居然写出sub_filter 
+注意：
+
+ngx_http_sub_module模块是一个过滤器，它修改网站响应内容中的字符串，比如你想把响应内容中的‘iuwai’全部替换成‘aaaaa‘，
+这个模块已经内置在nginx中，但是默认未安装，需要安装需要加上配置参数：–with-http_sub_module
+
+subs_filter 是第三方模块，可以多重替换
 
 nginx -V如下：
-nginx version: nginx/1.7.8
-built by gcc 4.4.7 20120313 (Red Hat 4.4.7-16) (GCC) 
-TLS SNI support enabled
-configure arguments: --prefix=/usr/local/nginx --with-pcre=../pcre-8.38 --with-openssl=../openssl-1.0.1j --with-zlib=../zlib-1.2.8 --with-http_ssl_module --add-module=../ngx_http_google_filter_module --add-module=../ngx_http_substitutions_filter_module/
-
-
