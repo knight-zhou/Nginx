@@ -1,0 +1,10 @@
+根据:
+https://github.com/cuber/ngx_http_google_filter_module/blob/master/README.zh-CN.md
+
+nginx的编译参数如下:# /usr/local/nginx/sbin/nginx -V
+nginx version: nginx/1.7.8
+built by gcc 4.4.7 20120313 (Red Hat 4.4.7-16) (GCC) 
+TLS SNI support enabled
+configure arguments: --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_sub_module --with-http_ssl_module --add-module=/opt/soft/ngx_http_google_filter_module/ --add-module=/opt/soft/ngx_http_substitutions_filter_module/
+
+配置文件和文件请看当前目录，如果不想每次都是提示ssl证书可以导入浏览器.
